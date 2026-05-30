@@ -1,5 +1,8 @@
 import profile from "./assets/profile.jpeg";
+import Chatbot from "./components/Chatbot";
+
 export default function Portfolio() {
+
   const skills = [
     "Python",
     "LangChain",
@@ -453,6 +456,9 @@ export default function Portfolio() {
         </p>
 
       </section>
+
+      <Chatbot />
+      
     </div>
   );
 }
