@@ -17,34 +17,51 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: "Groq Chatbot",
+      description:
+        "A simple chatbot using Groq, users can adjust the temperaure and tokens,also select different models from the provided list",
+      tech: ["LangChain", "Groq" ,"Streamlit"],
+      github: "https://github.com/sai-krishna-koleti/groq-chatbot",
+      demo: "https://groq-chatbot-by-sai.streamlit.app/"
+    },
+    {
       title: "Conversational PDF Q&A Chatbot using RAG and LangChain",
       description:
         "Developed a conversational AI chatbot that allows users to chat with PDF documents using RAG, LangChain, and Vector Databases with chat history support for contextual responses.",
-      tech: ["LangChain","RAG", "ChromaDB", "Groq","Hugging Face Embeddings"],
-    },
-    {
-      title: "RAG-based Document Question Answering using Llama3 and Groq API",
-      description:
-        "Built a Retrieval-Augmented Generation (RAG) application using Llama3 and Groq API to answer questions from uploaded documents with semantic search capabilities.",
-      tech: ["LangChain", "RAG", "FAISS","Groq", "Ollama Embeddings"],
+      tech: ["LangChain","RAG", "ChromaDB", "Groq","Hugging Face Embeddings" , "Streamlit"],
+      github: "https://github.com/sai-krishna-koleti/conversational-rag-pdf-chatbot",
+      demo:"https://conversational-rag-pdf-chatbot-by-sai.streamlit.app"
     },
     {
       title: "AI SQL Assistant using LangChain Agents and SQL Toolkit",
       description:
         "Created an AI-powered SQL assistant using LangChain agents and SQL toolkit to interact with databases using natural language queries.",
       tech: ["LangChain", "Groq", "Streamlit","Agents"],
+      github: "https://github.com/sai-krishna-koleti/ai-sql-assistant",
+      demo : "https://ai-sql-assistant-by-sai.streamlit.app"
+
     },
     {
       title: "Search Engine using LangChain Tools and Agents",
       description:
         "Implemented a search engine application using LangChain tools and agents for intelligent information retrieval and automated query handling.",
       tech: ["LangChain", "Groq", "Streamlit","Agents","Tools"],
+      github:"https://github.com/sai-krishna-koleti/ai-search-engine",
+      demo : "https://ai-search-engine-by-sai.streamlit.app"
     },
     {
       title: "Text Summarization with LangChain",
       description:
         "Built a text summarization application using LangChain and LLMs to generate concise summaries from long-form text while preserving key information and context.",
       tech: ["LangChain", "Groq", "Streamlit"],
+      github: "https://github.com/sai-krishna-koleti/ai-multi-source-summarizer",
+      demo : "https://ai-multi-source-summarizer-by-sai.streamlit.app/"
+    },
+    {
+      title: "RAG-based Document Question Answering using Llama3 and Groq API",
+      description:
+        "Built a Retrieval-Augmented Generation (RAG) application using Llama3 and Groq API to answer questions from uploaded documents with semantic search capabilities.",
+      tech: ["LangChain", "RAG", "FAISS","Groq", "Ollama Embeddings"],
     },
 
   ];
@@ -271,6 +288,31 @@ export default function Portfolio() {
                   ))}
 
                 </div>
+                <div className="mt-6 flex gap-3">
+
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700"
+                  >
+                    GitHub
+                  </a>
+                )}
+
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 border border-blue-600 text-blue-600 rounded-xl hover:bg-blue-50"
+                  >
+                    Live Demo
+                  </a>
+                )}
+
+              </div>
               </div>
             </div>
           ))}
